@@ -812,7 +812,7 @@ function renderProductModal(product) {
 
         <div class="product-actions">
             <button class="btn btn-secondary" data-detail-fav="${product.id}" type="button">
-                <img src="${isFavorite ? assets.icons.heartFilled : assets.icons.heart}" alt="">
+                <img src="${isFavorite ? assets.icons.heartFilled : assets.icons.heart}" alt="" width="50px" height="50px">
             </button>
 
             <button class="btn btn-primary" id="detailAddToCartBtn" type="button">
