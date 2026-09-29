@@ -1,29 +1,46 @@
 const $ = (id) => document.getElementById(id);
 
 const assets = {
+    // ФОТО: Запасная картинка, если основная не загрузится
     placeholder: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop',
     icons: {
-        heart: 'assets/icons/heart.svg',
-        heartFilled: 'assets/icons/heart-filled.svg',
-        grid: 'assets/icons/grid.svg',
-        tag: 'assets/icons/tag.svg',
-        rows: 'assets/icons/rows.svg',
-        pin: 'assets/icons/pin.svg',
-        arrowRight: 'assets/icons/arrow-right.svg',
-        plus: 'assets/icons/plus.svg',
-        minus: 'assets/icons/minus.svg',
-        orders: 'assets/icons/orders.svg',
-        card: 'assets/icons/card.svg',
-        gift: 'assets/icons/gift.svg',
-        settings: 'assets/icons/settings.svg',
-        help: 'assets/icons/help.svg',
-        cart: 'assets/icons/cart.svg'
+        // ИКОНКА: Сердечко пустое
+        heart: 'https://img.icons8.com/material-outlined/96/FA5252/like--v1.png',
+        // ИКОНКА: Сердечко заполненное
+        heartFilled: 'https://img.icons8.com/material-rounded/96/FA5252/like--v1.png',
+        // ИКОНКА: Сетка (каталог)
+        grid: 'https://img.icons8.com/ios-filled/100/228BE6/menu-squared-2.png',
+        // ИКОНКА: Бирка/Тег (категория)
+        tag: 'https://img.icons8.com/ios-filled/100/228BE6/menu-squared-2.png',
+        // ИКОНКА: Список/Строки (линия)
+        rows: 'https://img.icons8.com/material-rounded/96/FA5252/minus.png',
+        // ИКОНКА: Булавка/Локация
+        pin: 'https://img.icons8.com/fluency-systems-filled/96/FA5252/marker.png',
+        // ИКОНКА: Стрелка вправо
+        arrowRight: 'https://cdn-icons-png.flaticon.com/512/271/271220.png',
+        // ИКОНКА: Плюс
+        plus: 'https://img.icons8.com/fluency-systems-filled/96/FA5252/plus-math.png',
+        // ИКОНКА: Минус
+        minus: 'https://img.icons8.com/material-rounded/96/FA5252/minus.png',
+        // ИКОНКА: Коробка/Заказы
+        orders: 'https://cdn-icons-png.flaticon.com/512/2910/2910790.png',
+        // ИКОНКА: Кредитная карта
+        card: 'https://cdn-icons-png.flaticon.com/512/2000/2000672.png',
+        // ИКОНКА: Подарок
+        gift: 'https://cdn-icons-png.flaticon.com/512/4213/4213958.png',
+        // ИКОНКА: Шестеренка (настройки)
+        settings: 'https://img.icons8.com/ios-filled/500/228BE6/settings.png',
+        // ИКОНКА: Вопросительный знак (помощь)
+        help: 'https://img.icons8.com/sf-black-filled/64/228BE6/question-mark--v1.png',
+        // ИКОНКА: Корзина покупок
+        cart: 'https://img.icons8.com/pastel-glyph/64/228BE6/shopping-basket-2--v1.png'
     }
 };
 
 const categories = {
     electronics: {
         title: 'Электроника',
+        // ФОТО КАТЕГОРИИ: Электроника/Гаджеты
         image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=400&fit=crop',
         count: '12 450 товаров',
         subcategories: [
@@ -41,6 +58,7 @@ const categories = {
 
     clothing: {
         title: 'Одежда и обувь',
+        // ФОТО КАТЕГОРИИ: Одежда/Магазин
         image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&h=400&fit=crop',
         count: '28 320 товаров',
         subcategories: [
@@ -57,6 +75,7 @@ const categories = {
 
     home: {
         title: 'Дом и сад',
+        // ФОТО КАТЕГОРИИ: Интерьер/Дом
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop',
         count: '18 760 товаров',
         subcategories: [
@@ -73,6 +92,7 @@ const categories = {
 
     sport: {
         title: 'Спорт и отдых',
+        // ФОТО КАТЕГОРИИ: Спортзал/Активность
         image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=400&fit=crop',
         count: '9 540 товаров',
         subcategories: [
@@ -91,6 +111,7 @@ const categories = {
 const topProducts = [
     {
         id: 'top-1',
+        // ФОТО ТОВАРА: Беспроводные наушники
         image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop',
         name: 'Беспроводные наушники Pro Max',
         price: 49900,
@@ -109,6 +130,7 @@ const topProducts = [
 
     {
         id: 'top-2',
+        // ФОТО ТОВАРА: Смартфон
         image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop',
         name: 'Смартфон Galaxy Ultra 256GB',
         price: 549900,
@@ -127,6 +149,7 @@ const topProducts = [
 
     {
         id: 'top-3',
+        // ФОТО ТОВАРА: Красные кроссовки
         image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop',
         name: 'Кроссовки Air Comfort 2026',
         price: 59900,
@@ -145,6 +168,7 @@ const topProducts = [
 
     {
         id: 'top-4',
+        // ФОТО ТОВАРА: Умные часы
         image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop',
         name: 'Смарт-часы FitBand Pro',
         price: 34900,
@@ -163,6 +187,7 @@ const topProducts = [
 
     {
         id: 'top-5',
+        // ФОТО ТОВАРА: Свитер
         image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop',
         name: 'Свитер оверсайз Premium Wool',
         price: 29900,
@@ -181,6 +206,7 @@ const topProducts = [
 
     {
         id: 'top-6',
+        // ФОТО ТОВАРА: Рюкзак
         image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop',
         name: 'Рюкзак Urban Explorer 30L',
         price: 24900,
@@ -199,6 +225,7 @@ const topProducts = [
 
     {
         id: 'top-7',
+        // ФОТО ТОВАРА: TWS наушники в кейсе
         image: 'https://images.unsplash.com/photo-1590658268037-6bf12f032f55?w=400&h=400&fit=crop',
         name: 'TWS Earbuds SoundMax Mini',
         price: 19900,
@@ -217,6 +244,7 @@ const topProducts = [
 
     {
         id: 'top-8',
+        // ФОТО ТОВАРА: Настольная лампа
         image: 'https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=400&h=400&fit=crop',
         name: 'Лампа настольная Smart LED',
         price: 17900,
@@ -237,6 +265,7 @@ const topProducts = [
 const recommendProducts = [
     {
         id: 'rec-1',
+        // ФОТО ТОВАРА: Компьютерный монитор
         image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=400&fit=crop',
         name: 'Монитор 27" 4K',
         price: 249900,
@@ -255,6 +284,7 @@ const recommendProducts = [
 
     {
         id: 'rec-2',
+        // ФОТО ТОВАРА: Косметика/Крем
         image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop',
         name: 'Крем для лица увлажняющий',
         price: 89000,
@@ -273,6 +303,7 @@ const recommendProducts = [
 
     {
         id: 'rec-3',
+        // ФОТО ТОВАРА: Игровой геймпад
         image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=400&h=400&fit=crop',
         name: 'Геймпад Pro Controller',
         price: 34900,
@@ -291,6 +322,7 @@ const recommendProducts = [
 
     {
         id: 'rec-4',
+        // ФОТО ТОВАРА: Книга
         image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=400&fit=crop',
         name: 'Книга "Путь к успеху"',
         price: 59000,
@@ -309,6 +341,7 @@ const recommendProducts = [
 
     {
         id: 'rec-5',
+        // ФОТО ТОВАРА: Плюшевый мишка
         image: 'https://images.unsplash.com/photo-1559715541-5daf8a0296d0?w=400&h=400&fit=crop',
         name: 'Игрушка мягкая Мишка',
         price: 7900,
@@ -327,6 +360,7 @@ const recommendProducts = [
 
     {
         id: 'rec-6',
+        // ФОТО ТОВАРА: Кофемашина
         image: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=400&h=400&fit=crop',
         name: 'Кофемашина автомат',
         price: 129900,
@@ -371,7 +405,7 @@ function init() {
 /* ===== HELPERS ===== */
 
 function formatPrice(value) {
-    return new Intl.NumberFormat('ru-RU').format(value) + ' Сум';
+    return new Intl.NumberFormat('ru-RU').format(value) + ' Сум';
 }
 
 function getDiscount(product) {
@@ -683,7 +717,7 @@ function generateSubcategoryProducts(categoryKey, sub) {
 
         const product = {
             id: `gen-${Date.now()}-${i}`,
-            image: assets.placeholder,
+            image: assets.placeholder, // Использует онлайн-заглушку
             name: `${sub.name} ${productNames[i]}`,
             price,
             oldPrice,
@@ -812,7 +846,7 @@ function renderProductModal(product) {
 
         <div class="product-actions">
             <button class="btn btn-secondary" data-detail-fav="${product.id}" type="button">
-                <img src="${isFavorite ? assets.icons.heartFilled : assets.icons.heart}" alt="" width="50px" height="50px">
+                <img src="${isFavorite ? assets.icons.heartFilled : assets.icons.heart}" alt="" class="btn-icon">
             </button>
 
             <button class="btn btn-primary" id="detailAddToCartBtn" type="button">
@@ -1041,7 +1075,7 @@ function renderProfile() {
     container.innerHTML = `
         <div>
             <div class="profile-avatar">
-                <img src="assets/icons/profile.svg" alt="">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
             </div>
 
             <div class="profile-name">Гость</div>
@@ -1109,7 +1143,7 @@ function bindStaticButtons() {
     });
 
     $('seeAllTop').addEventListener('click', () => {
-        showToast(' Все товары ТОП недели — скоро');
+        showToast('🔥 Все товары ТОП недели — скоро');
     });
 
     let searchTimeout;
